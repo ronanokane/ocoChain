@@ -1,5 +1,5 @@
 git clone --recurse-submodules "https://github.com/ronanokane/StopLimitChain.git"<br>
-cd StopLimitChain
+cd StopLimitChain/
 
 
 Again similar to StopLimitChain you are not subjected to the restrictions of having to have a listed pair on the Binance exchange to place an order.
@@ -17,8 +17,8 @@ cancelOrder.sh &emsp;&emsp;# cancel manual order<br>
 
 Example:
 
-../oco.sh SELL AAVE/USDC 2 95 90 89 && ./sellAsset.sh AAVE/USDC 100    &emsp;# sell 100 percent of the wallets AAVE for USDC <br>
-../oco.sh BUY AAVE/USDC 2 95 90 89 && ./buyAsset.sh AAVE/USDC 100    &emsp;  # buy AAVE with 100% of wallets USDC<br>
+./oco/oco.sh SELL AAVE/USDC 2 95 90 89 && ./sellAsset.sh AAVE/USDC 100    &emsp;# sell 100 percent of the wallets AAVE for USDC <br>
+./oco/oco.sh BUY AAVE/USDC 2 95 90 89 && ./buyAsset.sh AAVE/USDC 100    &emsp;# buy AAVE with 100% of wallets USDC<br>
 
 A return code other than 0 can safely be assumed no triggure condition was met.
 
