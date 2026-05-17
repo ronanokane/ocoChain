@@ -30,18 +30,20 @@ else
     usage
 fi
 
-(./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - "$PERCENT" && echo limit worked) &
+cd ..
+
+(./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - "$PERCENT") &
 PID1=$!
 
-(./StopLimitChain.sh "$ORDER2" "$SYMBOL" "$STOP_TRIGGER" - - "$PERCENT" && ./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$STOP_TRIGGER_LIMIT" - - "$PERCENT" && echo stop limit worked ) &
+(./StopLimitChain.sh "$ORDER2" "$SYMBOL" "$STOP_TRIGGER" - - "$PERCENT" && ./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$STOP_TRIGGER_LIMIT" - - "$PERCENT") &
 PID2=$!
 
 # incase CTRL+C make sure all process are killed
-trap "pkill -P $PID1; pkill -P $PID2; exit 1" SIGINT
+trap "pkill -P $PID1 2>/dev/null; pkill -P $PID2 2>/dev/null; exit 1" SIGINT
 
 wait -n
 
-rc=$?    # rc is the exit status of the job that just exited
+rc=$?
 
 pkill -P $PID1 2>/dev/null
 pkill -P $PID2 2>/dev/null
