@@ -30,8 +30,6 @@ else
     usage
 fi
 
-cd ..
-
 (./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - "$PERCENT") &
 PID1=$!
 
