@@ -12,6 +12,9 @@ if [ $# -ne 6 ]; then
     usage
 fi
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
 BUYSELL=$1
 SYMBOL=$2
 PERCENT=$3
@@ -30,10 +33,10 @@ else
     usage
 fi
 
-(./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - "$PERCENT") &
+("$REPO_ROOT/StopLimitChain.sh" "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - "$PERCENT") &
 PID1=$!
 
-(./StopLimitChain.sh "$ORDER2" "$SYMBOL" "$STOP_TRIGGER" - - "$PERCENT" && ./StopLimitChain.sh "$ORDER1" "$SYMBOL" "$STOP_TRIGGER_LIMIT" - - "$PERCENT") &
+("$REPO_ROOT/StopLimitChain.sh" "$ORDER2" "$SYMBOL" "$STOP_TRIGGER" - - "$PERCENT" && "$REPO_ROOT/StopLimitChain.sh" "$ORDER1" "$SYMBOL" "$STOP_TRIGGER_LIMIT" - - "$PERCENT") &
 PID2=$!
 
 # incase CTRL+C make sure all process are killed
