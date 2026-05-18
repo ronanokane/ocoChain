@@ -10,7 +10,8 @@ There is over 3000+ symbol tickers (USDT based) on binance that can be used to p
 Available actions:
 
 sellAsset.sh         &emsp;&emsp;&emsp;# a martet buy<br>
-buyAsset.sh          &emsp;&emsp;&emsp;# a market sell<br>
+buyAsset.sh         &emsp;&emsp;&emsp;# a market sell<br>
+twoStep.sh          &emsp;&emsp;&emsp;# a helper script to indirectly buy or sell<br>
 oco.sh<br>
 StopLimitChain.sh<br>
 cancelOrder.sh &emsp;&emsp;# cancel manual order<br>
