@@ -1,0 +1,3 @@
+[submodule "StopLimitChain"]
+	path = StopLimitChain
+	url = https://github.com/ronanokane/StopLimitChain.git
