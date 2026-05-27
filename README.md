@@ -13,7 +13,7 @@ cd ocoChain/
 ```
 
 Again similar to StopLimitChain you are not subjected to the restrictions of having to have a listed pair on the Binance exchange to place an order.
-You only need the SYMBOL/s to be listed on the exchange at the point of performing an actual market buy or sell.
+You only need the SYMBOL/s to be listed on the exchange at the point of an actual market buy or sell.
 
 There is over 3000+ symbol tickers (USDT based) on binance that can be used to place an order initially. 
 
