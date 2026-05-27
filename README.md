@@ -1,4 +1,4 @@
-Clone in the following way.
+Clone first of all..
 
 ```
 git clone --recurse-submodules "https://github.com/ronanokane/ocoChain.git"
@@ -25,11 +25,13 @@ cancelOrder.sh       # cancel manual order
 Examples:
 ######
 
+sell 100 percent of the wallets AAVE for USDC
 ```
-./oco.sh SELL AAVE/USDC 2 95 90 89 && ./StopLimitChain/sellAsset.sh AAVE/USDC 100     sell 100 percent of the wallets AAVE for USDC
+./oco.sh SELL AAVE/USDC 2 95 90 89 && ./StopLimitChain/sellAsset.sh AAVE/USDC 100     
 ```
+buy AAVE with 100% of wallets USDC
 ```
-./oco.sh BUY AAVE/USDC 2 95 90 89 && ./StopLimitChain/buyAsset.sh AAVE/USDC 100    # buy AAVE with 100% of wallets USDC
+./oco.sh BUY AAVE/USDC 2 95 90 89 && ./StopLimitChain/buyAsset.sh AAVE/USDC 100 
 ```
 A return code other than 0 can safely be assumed no triggure condition was met.
 
