@@ -2,7 +2,7 @@ Purpose
 =======
 
 Just a standard oco(one cancels other) order similar to the Binance version but with the added advantage of being able to be chained together with any other script really.
-Particularly the twoStep.sh script. Allowing us to purchase/sell indirectly and access symbol pairs not listed.
+Particularly the twoStep.sh script. Allowing us to purchase/sell indirectly.
 
 Setup
 -----
