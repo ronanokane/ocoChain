@@ -23,7 +23,7 @@ Available actions:
 sellAsset.sh         # a martet buy
 buyAsset.sh          # a market sell
 twoStep.sh           # a helper script to indirectly buy or sell
-oco.sh<br>
+oco.sh
 StopLimitChain.sh
 cancelOrder.sh       # cancel manual order
 
