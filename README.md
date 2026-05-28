@@ -17,7 +17,9 @@ cd ocoChain/
 Usage
 -----
 
-Usage: ./oco.sh <BUY|SELL> <SYMBOL> <LIMIT_PRICE_TRIGGURE> <STOP_PRICE_TRIGGURE> <STOP_PRICE_LIMIT>
+```
+./oco.sh <BUY|SELL> <SYMBOL> <LIMIT_PRICE_TRIGGURE> <STOP_PRICE_TRIGGURE> <STOP_PRICE_LIMIT>
+```
 
 Available actions:
 
