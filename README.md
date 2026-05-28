@@ -4,7 +4,7 @@ Purpose
 Similar to a standard Binance oco except these can be placed on ticker symbols not just symbols listed as tradeable. Since it is a shell script and the action part
 is another script we aren' t just limited to buy or sell as actions.
 
-There is over 3000+ symbol tickers (USDT based) on binance that can be used to place an oco order initially.
+There is over 3000+ symbol tickers (USDT based) on binance that can be used to place an oco order.
 
 Setup
 -----
