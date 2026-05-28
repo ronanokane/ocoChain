@@ -1,8 +1,10 @@
 Purpose
 =======
 
-Just a standard oco(one cancels other) order similar to the Binance version but with the added advantage of being able to be chained together with any other script really.
-Particularly the twoStep.sh script. Allowing us to purchase/sell indirectly.
+Similar to a standard Binance oco except these can be placed on ticker symbols not just symbols listed as tradeable. Since it is a shell script and the action part
+is another script we aren' t just limited to buy or sell as actions.
+
+There is over 3000+ symbol tickers (USDT based) on binance that can be used to place an oco order initially.
 
 Setup
 -----
@@ -11,11 +13,6 @@ Setup
 git clone --recurse-submodules "https://github.com/ronanokane/ocoChain.git"
 cd ocoChain/
 ```
-
-Again similar to StopLimitChain you are not subjected to the restrictions of having to have a listed pair on the Binance exchange to place an order.
-You only need the SYMBOL/s to be listed on the exchange at the point of an actual market buy or sell.
-
-There is over 3000+ symbol tickers (USDT based) on binance that can be used to place an order initially. 
 
 Available actions:
 
