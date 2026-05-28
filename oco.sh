@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Usage:
-# oco.sh <BUY|SELL> <SYMBOL> <PERCENT> <LIMIT_TRIGGURE> <STOP_TRIGGURE> <STOP_PRICE_LIMIT>
+# oco.sh <BUY|SELL> <SYMBOL> <LIMIT_TRIGGURE> <STOP_TRIGGURE> <STOP_PRICE_LIMIT>
 
 usage(){
-  echo "Usage: $0 <BUY|SELL> <SYMBOL> <PERCENT> <LIMIT_PRICE_TRIGGURE> <STOP_PRICE_TRIGGURE> <STOP_PRICE_LIMIT>"
+  echo "Usage: $0 <BUY|SELL> <SYMBOL> <LIMIT_PRICE_TRIGGURE> <STOP_PRICE_TRIGGURE> <STOP_PRICE_LIMIT>"
   exit 1
 }
 
-if [ $# -ne 6 ]; then
+if [ $# -ne 5 ]; then
     usage
 fi
 
@@ -17,11 +17,10 @@ cd "$SCRIPT_DIR/StopLimitChain"
 
 BUYSELL=$1
 SYMBOL=$2
-PERCENT=$3
 
-LIMIT_TRIGGER=$4
-STOP_TRIGGER=$5
-STOP_TRIGGER_LIMIT=$6
+LIMIT_TRIGGER=$3
+STOP_TRIGGER=$4
+STOP_TRIGGER_LIMIT=$5
 
 if [ "$BUYSELL" == "BUY" ]; then
     ORDER1="LIMITBUY"
@@ -33,10 +32,10 @@ else
     usage
 fi
 
-("./StopLimitChain.sh" "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - "$PERCENT") &
+("./StopLimitChain.sh" "$ORDER1" "$SYMBOL" "$LIMIT_TRIGGER" - - 100) &
 PID1=$!
 
-("./StopLimitChain.sh" "$ORDER2" "$SYMBOL" "$STOP_TRIGGER" - - "$PERCENT" && "./StopLimitChain.sh" "$ORDER1" "$SYMBOL" "$STOP_TRIGGER_LIMIT" - - "$PERCENT") &
+("./StopLimitChain.sh" "$ORDER2" "$SYMBOL" "$STOP_TRIGGER" - - 100 && "./StopLimitChain.sh" "$ORDER1" "$SYMBOL" "$STOP_TRIGGER_LIMIT" - - 100) &
 PID2=$!
 
 # incase CTRL+C make sure all process are killed
