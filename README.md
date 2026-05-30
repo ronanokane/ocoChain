@@ -24,9 +24,9 @@ Usage
 Available actions:
 
 ```
-sellAsset.sh         # a martet buy
-buyAsset.sh          # a market sell
-twoStep.sh           # a helper script to indirectly buy or sell
+sellAsset.sh         # martet buy
+buyAsset.sh          # market sell
+twoStep.sh           # two-step buy/sell router
 oco.sh
 StopLimitChain.sh
 cancelOrder.sh       # cancel manual order
